@@ -22,4 +22,6 @@
       1. Character
       2. python manage.py createsuperuser
    3. views
-      1. R: CharacterListView(ListView):
+      1. R: CharacterListView
+   4. templates/t1/
+      1. character_list.html
