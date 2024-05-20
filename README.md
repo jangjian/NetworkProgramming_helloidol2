@@ -25,3 +25,5 @@
       1. R: CharacterListView
    4. templates/t1/
       1. character_list.html
+   5. urls
+      1. t1:character_list
