@@ -15,7 +15,8 @@
    1. models
       1. Character
          1. name, feature, created_at, updated_at
-         2. __str__(): 객체를 출력할 때, 알맞은 string으로 출력하자
+         2. `__str__()`: 객체를 출력할 때, 알맞은 string으로 출력하자
+         3. `get_absolute_url` : 캐릭터 하나 데이터 가져오자
       2. python manage.py makemigrations t1
       3. python manage.py migrate t1
    2. admin
@@ -23,10 +24,13 @@
       2. python manage.py createsuperuser
    3. views
       1. R: CharacterListView
+      2. R: CharacterDetailView
    4. templates/t1/
       1. character_list.html
+      2. charcter_detail.html
    5. urls
       1. t1:character_list
+      2. t1:character_detail
 4. templates/
    1. base.html
       1. settings.py > TEMPLATES

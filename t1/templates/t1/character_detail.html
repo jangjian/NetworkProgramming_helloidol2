@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Character Detail{% endblock %}
+{% block content %}
+    <h1>{{ character.name }}</h1>
+    <ul>
+        <li>{{ character.feature }}</li>
+        <li>{{ character.created_at }}</li>
+        <li>{{ character.updated_at }}</li>
+    </ul>
+    <a href="{% url 't1:character_list' %}">Character List gogo=3</a>
+{% endblock %}

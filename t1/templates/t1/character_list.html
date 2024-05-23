@@ -10,7 +10,7 @@
         {% for character in character_list %}
         <tr>
             <td>{{ forloop.counter }}</td>
-            <td>{{ character.name }}</td>
+            <td><a href="{% url 't1:character_detail' pk=character.id %}">{{ character.name }}</a></td>
             <td>{{ character.feature }}</td>
         </tr>
         {% endfor %}

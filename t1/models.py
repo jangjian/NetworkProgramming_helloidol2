@@ -1,4 +1,6 @@
 from django.db import models
+from django.shortcuts import resolve_url
+
 
 class Character(models.Model):
     name = models.CharField(max_length=20) #CharField는 max_length 필수
@@ -8,3 +10,6 @@ class Character(models.Model):
 
     def __str__(self):  #클래스를 출력할 때 이 함수를 호출하여 문자화한다.
         return f'이름 : {self.name}, 특징 : {self.feature}. 만든 날짜 : {self.created_at}, 수정한 날짜 : {self.updated_at}'
+
+    def get_absolute_url(self): #이 객체 하나의 데이터를 가져오는 url
+        return resolve_url('t1:detail', pk=self.id)
