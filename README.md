@@ -25,12 +25,15 @@
    3. views
       1. R: CharacterListView
       2. R: CharacterDetailView
+      3. R: CharacterCreateView
    4. templates/t1/
       1. character_list.html
-      2. charcter_detail.html
+      2. character_detail.html
+      3. character_create.html
    5. urls
       1. t1:character_list
       2. t1:character_detail
+      3. t1:character_create
 4. templates/
    1. base.html
       1. settings.py > TEMPLATES
