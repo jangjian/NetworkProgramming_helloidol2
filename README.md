@@ -27,16 +27,19 @@
       2. R: CharacterDetailView
       3. R: CharacterCreateView
       4. U: CharacterUpdateView
+      5. D: CharacterDeleteView
    4. templates/t1/
       1. character_list.html
       2. character_detail.html
       3. character_create.html
       4. character_update.html
+      5. character_confirm_delete.html
    5. urls
       1. t1:character_list
       2. t1:character_detail
       3. t1:character_create
       4. t1:character_update
+      5. t1:character_delete
 4. templates/
    1. base.html
       1. settings.py > TEMPLATES
