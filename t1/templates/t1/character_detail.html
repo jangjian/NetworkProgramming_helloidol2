@@ -2,6 +2,12 @@
 {% block title %}Character Detail{% endblock %}
 {% block content %}
     <h1>{{ character.name }}</h1>
+    {% if character.photo == None %}
+        {% load static %}
+        <img src="{% static 't1/photo/no_photo.jpg' %}" alt="사진없음">
+    {% else  %}
+        <img src="{{ character.photo.url}}" alt="업로드한 사진">
+    {% endif %}
     <ul>
         <li>{{ character.feature }}</li>
         <li>{{ character.created_at }}</li>

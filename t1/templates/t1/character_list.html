@@ -4,6 +4,7 @@
     <table class="table">
         <tr>
             <th>#</th>
+            <th>photo</th>
             <th>name</th>
             <th>feature</th>
             <th>edit</th>
@@ -12,6 +13,14 @@
         {% for character in character_list %}
         <tr>
             <td>{{ forloop.counter }}</td>
+            <td>
+                {% if character.photo == None %}
+                    {% load static %}
+                    <img src="{% static 't1/photo/no_photo.jpg' %}" alt="사진없음" style="width:100px; height:100px; object-fit: cover;">
+                {% else  %}
+                    <img src="{{ character.photo.url}}" alt="업로드한 사진" style="width:100px; height:100px; object-fit: cover;">
+                {% endif %}
+            </td>
             <td><a href="{% url 't1:character_detail' pk=character.id %}">{{ character.name }}</a></td>
             <td>{{ character.feature }}</td>
             <td><a href="{% url 't1:character_update' pk=character.id %}" class="btn btn-warning">🛠️</a></td>
